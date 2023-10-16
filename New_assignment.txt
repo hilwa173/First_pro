@@ -1,0 +1,99 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        int x = 5;
+        double y = 2.5;
+        String name = "john";
+        boolean isTrue = true;
+        for(int i=1;i<x;i++)
+            System.out.println(i);
+        //5.relational operator
+        Scanner sc = new Scanner(System.in);
+        int num1, num2;
+        System.out.println("enter first number to compare");
+        num1 = sc.nextInt();
+        System.out.println("enter second number to compare");
+        num2 = sc.nextInt();
+        if(num1>num2)
+        System.out.println(num1+" is greater than "+num2);
+        else if(num1<num2)
+        System.out.println(num1+" is less than "+num2);
+        else
+            System.out.println(" they are equal ");
+        //6.switch case
+        Scanner in= new Scanner(System.in);
+
+        int dayOfWeek ;
+        System.out.println(" enter weak ");
+        dayOfWeek =in.nextInt();
+        switch (dayOfWeek) {
+            case 1:
+                System.out.println("MONDAY");
+                break;
+            case 2:
+                System.out.println("TUESDAY");
+                break;
+            case 3:
+                System.out.println("WEDNESDAY");
+                break;
+            default:
+                System.out.println("invalid day");
+        }
+        //4.arithmetic oparator
+        addition();
+        substraction();
+        product();
+        division();
+        //8.method with parameter & return type
+        int result=remainder(11,2);
+        System.out.println("remainder is "+result);
+    }
+    public static void addition(){
+        double a,b,sum;
+        Scanner in = new Scanner(System.in);
+        System.out.println("enter first number to add");
+        a=in.nextDouble();
+        System.out.println("enter second number to add");
+        b=in.nextDouble();
+        sum=a+b;
+        System.out.println("the sum is "+sum);
+    }
+    public static void substraction(){
+        double a,b,sub;
+        Scanner in = new Scanner(System.in);
+        System.out.println("enter first number to substract");
+        a=in.nextDouble();
+        System.out.println("enter second number to substract");
+        b=in.nextDouble();
+        sub=a-b;
+        System.out.println("substraction is "+sub);
+    }
+    public static void product(){
+        double a,b,pro;
+        Scanner in = new Scanner(System.in);
+        System.out.println("enter first number to multiple");
+        a=in.nextDouble();
+        System.out.println("enter second number to multiple");
+        b=in.nextDouble();
+        pro=a*b;
+        System.out.println("product is "+pro);
+    }
+
+    public static void division(){
+        double a,b,div;
+        Scanner in = new Scanner(System.in);
+        System.out.println("enter first number for division");
+        a=in.nextDouble();
+        System.out.println("enter second number for division");
+        b=in.nextDouble();
+        div=a/b;
+        System.out.println("division is "+div);
+    }
+    public static int remainder(int a, int b){
+
+        return a%b;
+    }
+
+
+}
+
